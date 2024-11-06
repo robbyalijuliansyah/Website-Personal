@@ -1,0 +1,407 @@
+/* Gaya Umum */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+/* Batas Awal Navigasi Bar */
+.navbar {
+    background: linear-gradient(
+        135deg,
+        #423f75,
+        #c81322
+    ); /* Gradient background */
+    padding: 15px 0; /* Padding atas dan bawah */
+    position: fixed; /* Posisi tetap */
+    width: 100%; /* Lebar penuh */
+    z-index: 1000; /* Menempatkan navbar di atas konten */
+}
+.container {
+    display: flex; /* Menggunakan Flexbox */
+    justify-content: space-between; /* Menyebar elemen   */
+    align-items: center; /* Memusatkan elemen secara vertikal */
+    max-width: 1200px; /* Lebar maksimum */
+    margin: 0 auto; /* Memusatkan kontainer */
+    padding: 0 20px; /* Padding kiri dan kanan */
+}
+.logo {
+    color: white; /* Warna logo */
+    font-size: 1.8em; /* Ukuran font untuk logo */
+    text-transform: uppercase; /* Mengubah huruf menjadi kapital semua */
+}
+.nav-list {
+    list-style: none; /* Menghilangkan bullet point */
+    display: flex; /* Menggunakan Flexbox */
+    margin: 0; /* Menghilangkan margin */
+    padding: 0; /* Menghilangkan padding */
+}
+.nav-list li {
+    margin-left: 20px; /* Jarak antara item */
+}
+
+.nav-list a {
+    color: white; /* Warna teks */
+    text-decoration: none; /* Menghilangkan garis bawah */
+    padding: 10px 15px; /* Padding dalam link */
+    border-radius: 5px; /* Sudut membulat */
+    transition: background-color 0.3s; /* Transisi untuk perubahan warna */
+}
+/* Mengubah warna saat hover */
+.nav-list a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Warna saat hover */
+}
+/* Batas Akhir Navigasi Bar */
+/* Batas Awal Hamburger Menu */
+.menu-toggle {
+    display: none; /* Sembunyikan untuk layar besar */
+    flex-direction: column; /* Menumpuk bar */
+    cursor: pointer; /* Menunjukkan bahwa ini dapat diklik */
+}
+.bar {
+    height: 3px; /* Tinggi bar */
+    width: 25px; /* Lebar bar */
+    background-color: white; /* Warna bar */
+    margin: 3px 0; /* Jarak antar bar */
+}
+/* Media Query untuk Responsif */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none; /* Sembunyikan menu untuk layar kecil */
+        flex-direction: column; /* Menumpuk item */
+        position: absolute; /* Posisi absolut untuk menu */
+        top: 80px; /* Jarak dari atas */
+        left: 0; /* Menempel ke kiri */
+        background: linear-gradient(
+            135deg,
+            #423f75,
+            #c81322
+        ); /* Gradient
+        background */
+        width: 100%; /* Lebar penuh */
+    }
+    .nav-list.active {
+        display: flex; /* Tampilkan menu saat aktif */
+    }
+    .menu-toggle {
+        display: flex; /* Tampilkan menu hamburger */
+    }
+    .navbar {
+        padding: 10px 0; /* Padding navbar lebih kecil untuk layar kecil */
+    }
+    .nav-list a {
+        padding: 0px; /* Padding yang lebih besar untuk item menu */
+        text-align: center; /* Memusatkan teks dalam item */
+    }
+}
+/* Batas Akhir Hamburger Menu */
+/* Batas Awal Hero */
+.hero {
+    background-image: url("images/gambar1.jpg"); /* Gambar latar belakang */
+    background-size: cover; /* Menutupi seluruh area */
+    background-position: center; /* Pusat gambar */
+    height: 100vh; /* Tinggi penuh viewport */
+    display: flex; /* Menggunakan Flexbox */
+    flex-direction: column; /* Mengatur arah konten */
+    justify-content: center; /* Memusatkan konten secara vertikal */
+    align-items: center; /* Memusatkan konten secara horizontal */
+    color: white; /* Warna teks */
+    text-align: center; /* Memusatkan teks */
+    position: relative; /* Posisi relatif untuk elemen overlay */
+    overflow: hidden; /* Menyembunyikan bagian yang berlebihan */
+}
+/* Overlay untuk efek gelap */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Warna hitam transparan */
+    z-index: 1; /* Menempatkan overlay di atas gambar */
+}
+/* Gaya untuk Judul */
+.hero h1 {
+    font-size: 3em; /* Ukuran font untuk judul */
+    margin: 0; /* Menghilangkan margin */
+    animation: fadeInDown 1s; /* Animasi saat muncul */
+}
+/* Gaya untuk Subjudul */
+.hero h2 {
+    font-size: 1.5em; /* Ukuran font untuk subjudul */
+    margin: 10px 0; /* Jarak atas dan bawah */
+    animation: fadeInUp 1s; /* Animasi saat muncul */
+}
+/* Gaya untuk Tombol */
+.hero button {
+    padding: 10px 20px; /* Padding dalam tombol */
+    font-size: 1em; /* Ukuran font */
+    background-color: #007bff; /* Warna latar belakang tombol */
+    color: white; /* Warna teks */
+    border: none; /* Tanpa batas */
+    border-radius: 5px; /* Sudut membulat */
+    cursor: pointer; /* Menunjukkan bahwa tombol dapat diklik */
+    transition: background-color 0.3s; /* Transisi untuk perubahan warna */
+}
+/* Mengubah warna tombol saat hover */
+.hero button:hover {
+    background-color: #0056b3; /* Warna tombol saat hover */
+}
+/* Animasi untuk judul dan subjudul */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Batas Akhir Hero */
+/* Batas Awal Highlights */
+.highlights {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+.highlights h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+.highlight-content {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    ); /* Responsive
+        grid */
+}
+.highlight-card {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+.highlight-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.highlight-card i {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+.highlight-card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+}
+.highlight-card p {
+    color: #555;
+    font-size: 0.95rem;
+}
+/* Media Query untuk layar sangat kecil */
+@media (max-width: 480px) {
+    .highlight-content {
+        grid-template-columns: 1fr;
+    }
+    .highlight-card {
+        width: 100%;
+    }
+}
+/* Batas Akhir Highlights */
+/* Batas Awal Footer */
+footer {
+    background: linear-gradient(
+        135deg,
+        #423f75,
+        #c81322
+    ); /* Gradient
+        background */
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-content p {
+    margin-bottom: 10px;
+}
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+.social-links a:hover {
+    color: #f1f1f1;
+}
+/* Batas Akhir Footer */
+/* Batas Awal Portfolio */
+.portfolio {
+    padding: 150px 20px; /* Padding untuk bagian portfolio */
+    text-align: center; /* Memusatkan teks */
+}
+.portfolio-item {
+    margin: 20px; /* Jarak antara item portfolio */
+    padding: 20px; /* Padding dalam item */
+    border: 1px solid #ddd; /* Batas */
+    border-radius: 5px; /* Sudut membulat */
+}
+.portofolio-item img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+/* Batas Akhir Portfolio */
+
+/* Batas Awal Gallery */
+.gallery {
+    padding: 150px 20px;
+    text-align: center;
+    background-color: #f4f4f9;
+}
+.gallery h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+.gallery-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+/* Batas Akhir Gallery */
+
+/* Batas Awal About */
+.about {
+    padding: 150px 20px;
+    text-align: center;
+}
+.about-content {
+    display: flex;
+    flex-direction: column; /* Stack konten di atas gambar secara default */
+    justify-content: center;
+    align-items: center; /* Memusatkan konten secara horizontal */
+}
+.about-photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px; /* Jarak antara foto dan biodata */
+}
+.about-bio {
+    max-width: 600px;
+    text-align: center; /* Memusatkan teks biodata */
+}
+.about-bio h3 {
+    margin: 10px 0;
+}
+.about-bio h4 {
+    margin-top: 20px;
+}
+/* Skills Section */
+.skills {
+    margin-top: 20px;
+}
+.skill {
+    margin-bottom: 20px;
+}
+.skill p {
+    margin: 0 0 5px 0;
+    font-weight: bold;
+}
+.skill-bar {
+    background-color: #ddd;
+    height: 10px;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.skill-level {
+    height: 100%;
+    border-radius: 5px;
+}
+.skill-level.html-css {
+    width: 90%;
+    background-color: #007bff;
+    animation: skill-animation 2s ease-out;
+}
+.skill-level.javascript {
+    width: 80%;
+    background-color: #f39c12;
+    animation: skill-animation 2s ease-out;
+}
+.skill-level.figma {
+    width: 75%;
+    background-color: #61dafb;
+    animation: skill-animation 2s ease-out;
+}
+.skill-level.desainui {
+    width: 70%;
+    background-color: #68a063;
+    animation: skill-animation 2s ease-out;
+}
+/* Animasi untuk Progress Bar */
+@keyframes skill-animation {
+    from {
+        width: 0;
+    }
+    to {
+        width: inherit;
+    }
+}
+/* Media Query untuk Responsif */
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row; /* Tampilan side-by-side pada layar besar */
+        align-items: center; /* Memusatkan konten secara vertikal */
+    }
+    .about-photo img {
+        margin-bottom: 0;
+        margin-right: 20px; /* Tambahkan jarak antara gambar dan teks pada
+        layar besar */
+    }
+    .about-bio {
+        text-align: left; /* Teks rata kiri pada layar besar */
+    }
+}
+/* Batas Akhir About */

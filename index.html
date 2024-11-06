@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Personal Website</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo">MyWebsite</h1>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="portofolio.html">Portfolio</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Hero Section Awal -->
+        <section id="home" class="hero">
+            <h1>Selamat Datang di Website Personalku</h1>
+            <h2>
+                Saya seorang
+                <span id="rotateText"></span>
+            </h2>
+            <button onclick="scrollToSection('about')">Learn More</button>
+        </section>
+        <!-- Hero Section Akhir-->
+        <!-- Highlights Section Awal -->
+        <section id="highlights" class="highlights">
+            <h2>Skill</h2>
+            <div class="highlight-content">
+                <div class="highlight-card">
+                    <i class="fas fa-html5"></i>
+                    <!-- Ikon kode -->
+                    <h3>HTML</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Integer nec odio. Praesent libero. Sed cursus ante
+                        dapibus diam. Sed nisi. Nulla quis sem at nibh elementum
+                        imperdiet.
+                    </p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-css3-alt"></i>
+                    <!-- Ikon chart -->
+                    <h3>CSS</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Integer nec odio. Praesent libero. Sed cursus ante
+                        dapibus diam. Sed nisi. Nulla quis sem at nibh elementum
+                        imperdiet.
+                    </p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-java"></i>
+                    <!-- Ikon lampu ide -->
+                    <h3>JavaScript</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Integer nec odio. Praesent libero. Sed cursus ante
+                        dapibus diam. Sed nisi. Nulla quis sem at nibh elementum
+                        imperdiet.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Highlights Section Akhir -->
+        <!-- Footer Section Awal -->
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2024 Robby Ali Juliansyah | All Rights Reserved</p>
+                <div class="social-links">
+                    <a href="https://linkedin.com" target="_blank"
+                        ><i class="fab fa-linkedin"></i
+                    ></a>
+
+                    <a href="https://github.com" target="_blank"
+                        ><i class="fab fa-github"></i
+                    ></a>
+
+                    <a href="https://twitter.com" target="_blank"
+                        ><i class="fab fa-twitter"></i
+                    ></a>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer Section Akhir -->
+        <script src="script.js"></script>
+    </body>
+</html>
