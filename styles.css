@@ -95,7 +95,7 @@ body {
 /* Batas Akhir Hamburger Menu */
 /* Batas Awal Hero */
 .hero {
-    background-image: url("images/gambar1.jpg"); /* Gambar latar belakang */
+    background-image: url("gambar1.jpg"); /* Gambar latar belakang */
     background-size: cover; /* Menutupi seluruh area */
     background-position: center; /* Pusat gambar */
     height: 100vh; /* Tinggi penuh viewport */
